@@ -1,5 +1,5 @@
 const Banner = () => {
-	return <div>Banner</div>;
+	return <div className="font-inter">Banner</div>;
 };
 
 export default Banner;
