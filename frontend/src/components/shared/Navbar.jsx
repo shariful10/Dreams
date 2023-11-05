@@ -30,7 +30,7 @@ const Navbar = () => {
 
 	return (
 		<nav className="flex justify-between items-center w-5/6 mx-auto py-4">
-			<Link to="/" className={`${isMenuToggle && "hidden"}`}>
+			<Link to="/" className={`${isMenuToggle && "hidden transition-all duration-1000"}`}>
 				<img src={logo} width={200} alt="" />
 			</Link>
 			{isAboveMediumScreens ? (
@@ -89,8 +89,8 @@ const Navbar = () => {
 				<button
 					className={`${
 						isMenuToggle
-							? "hidden"
-							: "rounded-full bg-[#ff6575] hover:bg-[#e72f41] p-2"
+							? "hidden transition-all duration-1000"
+							: "rounded-full bg-[#ff6575] hover:bg-[#e72f41] p-2 transition-all duration-1000"
 					}`}
 					onClick={handleMenu}
 				>
@@ -106,13 +106,14 @@ const Navbar = () => {
 				} fixed right-0 bottom-0 z-40 h-full bg-[#ff657456] shadow-2xl`}
 			>
 				{/* <==<<=== Close Icon ===>>==> */}
-				<div className="flex justify-end px-12 pb-12 pt-7">
+				<div className="flex justify-between px-8 pb-12 pt-7">
+               <img src={logo} width={150} alt="" />
 					<button onClick={() => setIsMenuToggle(!isMenuToggle)}>
-						<XMarkIcon className="h-8 w-8 text-gray-400" />
+						<XMarkIcon className="h-8 w-8 text-[#012159]" />
 					</button>
 				</div>
 				{/* <==<<=== Menu Items ===>>==> */}
-				<div className="flex flex-col justify-center gap-10 text-2xl px-5">
+				<div className="flex flex-col justify-center gap-10 text-2xl px-8">
 					<Link
 						to="/"
 						onClick={() => {
