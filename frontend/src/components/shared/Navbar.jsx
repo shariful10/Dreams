@@ -1,13 +1,13 @@
-import { Link, useLocation } from "react-router-dom";
-import logo from "../../assets/images/logo.svg";
 import { useEffect, useState } from "react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import { AiOutlineClose } from "react-icons/ai";
+import logo from "../../assets/images/logo.svg";
+import { Link, useLocation } from "react-router-dom";
+import { HiMiniBars3BottomRight } from "react-icons/hi2";
 import useMediaQuery from "../../hooks/useMediaQuery";
 
 const Navbar = () => {
 	const location = useLocation();
 	const [active, setActive] = useState(null);
-	// const [activeMenu, setActiveMenu] = useState(false);
 	const [isMenuToggle, setIsMenuToggle] = useState(false);
 
 	const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
@@ -30,7 +30,12 @@ const Navbar = () => {
 
 	return (
 		<nav className="flex justify-between items-center w-5/6 mx-auto py-4">
-			<Link to="/" className={`${isMenuToggle && "hidden transition-all duration-1000"}`}>
+			<Link
+				to="/"
+				className={`${
+					isMenuToggle && "hidden transition-all duration-1000"
+				}`}
+			>
 				<img src={logo} width={200} alt="" />
 			</Link>
 			{isAboveMediumScreens ? (
@@ -94,7 +99,7 @@ const Navbar = () => {
 					}`}
 					onClick={handleMenu}
 				>
-					<Bars3Icon className="h-6 w-6 text-white" />
+					<HiMiniBars3BottomRight className="h-6 w-6 text-white" />
 				</button>
 			)}
 			{/* <==<<=== Mobile Menu ===>>==> */}
@@ -107,9 +112,9 @@ const Navbar = () => {
 			>
 				{/* <==<<=== Close Icon ===>>==> */}
 				<div className="flex justify-between px-8 pb-12 pt-7">
-               <img src={logo} width={150} alt="" />
+					<img src={logo} width={150} alt="" />
 					<button onClick={() => setIsMenuToggle(!isMenuToggle)}>
-						<XMarkIcon className="h-8 w-8 text-[#012159]" />
+						<AiOutlineClose className="h-8 w-8 text-[#012159]" />
 					</button>
 				</div>
 				{/* <==<<=== Menu Items ===>>==> */}
