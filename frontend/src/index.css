@@ -11,3 +11,11 @@
 .default {
 	@apply font-medium tracking-wide transition-colors duration-300 hover:text-[#ff6575];
 }
+
+.activeMob {
+	@apply font-medium tracking-wide text-[#012159] transition-colors duration-300 hover:text-[#012159];
+}
+
+.defaultMob {
+	@apply font-medium tracking-wide transition-colors text-white duration-300 hover:text-[#012159];
+}
