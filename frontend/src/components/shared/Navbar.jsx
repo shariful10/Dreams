@@ -8,6 +8,7 @@ import useMediaQuery from "../../hooks/useMediaQuery";
 const Navbar = () => {
 	const location = useLocation();
 	const [active, setActive] = useState(null);
+	const [scrolling, setScrolling] = useState(false);
 	const [isMenuToggle, setIsMenuToggle] = useState(false);
 
 	const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
@@ -15,6 +16,22 @@ const Navbar = () => {
 	const handleMenu = () => {
 		setIsMenuToggle(!isMenuToggle);
 	};
+
+	useEffect(() => {
+		const handleScroll = () => {
+			if (window.scrollY > 0) {
+				setScrolling(true);
+			} else {
+				setScrolling(false);
+			}
+		};
+
+		window.addEventListener("scroll", handleScroll);
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
 
 	useEffect(() => {
 		if (location.pathname === "/") {
@@ -29,7 +46,11 @@ const Navbar = () => {
 	}, [location]);
 
 	return (
-		<div className="bg-bannerBg fixed top-0 w-full">
+		<div
+			className={`${
+				scrolling ? "bg-bannerBg shadow-lg shadow-[#ff657439]" : "bg-transparent"
+			} fixed top-0 w-full duration-500 z-20`}
+		>
 			<nav className="flex justify-between items-center w-5/6 mx-auto py-4 sticky">
 				<Link
 					to="/"
