@@ -1,5 +1,6 @@
 import { AiFillStar } from "react-icons/ai";
 import bannerImg from "../assets/images/banner-img.png";
+import CountUp from "react-countup";
 
 const Banner = () => {
 	return (
@@ -17,19 +18,20 @@ const Banner = () => {
 					</h3>
 					<div className="flex items-center gap-6">
 						<h1 className="text-[32px] md:text-[38px] lg:text-[42px] xl:text-[44px] 2xl:text-[48px] text-[#002058] font-bold">
-							290+
+							{/* 290+ */}
+							<CountUp start={0} end={290} duration={5} />+
 						</h1>
 						<div className="flex items-center gap-4">
 							<h1 className="text-[32px] md:text-[38px] lg:text-[42px] xl:text-[44px] 2xl:text-[48px] text-[#002058] font-bold">
 								4.5
 							</h1>
-                     <div className="flex gap-2">
-                        <AiFillStar className="text-xl text-[#ffb54a]" />
-                        <AiFillStar className="text-xl text-[#ffb54a]" />
-                        <AiFillStar className="text-xl text-[#ffb54a]" />
-                        <AiFillStar className="text-xl text-[#ffb54a]" />
-                        <AiFillStar className="text-xl text-[#ffb54a]" />
-                     </div>
+							<div className="flex gap-2">
+								<AiFillStar className="text-xl text-[#ffb54a]" />
+								<AiFillStar className="text-xl text-[#ffb54a]" />
+								<AiFillStar className="text-xl text-[#ffb54a]" />
+								<AiFillStar className="text-xl text-[#ffb54a]" />
+								<AiFillStar className="text-xl text-[#ffb54a]" />
+							</div>
 						</div>
 					</div>
 				</div>
