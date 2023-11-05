@@ -1,105 +1,31 @@
-import { useState } from "react";
-import Logo from "../../assets/images/logo.svg"
-import useMediaQuery from "../../hooks/useMediaQuery";
+import { Link } from "react-router-dom";
+import logo from "../../assets/images/logo.svg";
 
-const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
-	const [isMenuToggle, setIsMenuToggle] = useState(false);
-
-	const flexBetween = "flex items-center justify-between";
-	const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
-
-	const navbarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
-
+const Navbar = () => {
 	return (
-		<nav>
-			<div
-				className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6`}
-			>
-				<div className={`${flexBetween} mx-auto w-5/6`}>
-					<div className={`${flexBetween} w-full gap-16`}>
-						{/* <==<<=== Left Side ===>>==> */}
-						<a href="/">
-							<img src={Logo} alt="Logo" />
-						</a>
-						{/* <==<<=== Right Side ===>>==> */}
-						{isAboveMediumScreens ? (
-							<div className={`${flexBetween} w-full`}>
-								<div
-									className={`${flexBetween} gap-8 text-base font-medium`}
-								>
-									<Link
-										page="Home"
-										selectedPage={selectedPage}
-										setSelectedPage={setSelectedPage}
-									/>
-									<Link
-										page="Benefits"
-										selectedPage={selectedPage}
-										setSelectedPage={setSelectedPage}
-									/>
-									<Link
-										page="Our Classes"
-										selectedPage={selectedPage}
-										setSelectedPage={setSelectedPage}
-									/>
-									<Link
-										page="Contact Us"
-										selectedPage={selectedPage}
-										setSelectedPage={setSelectedPage}
-									/>
-								</div>
-								<div className={`${flexBetween} gap-8 font-medium`}>
-									<p>Sign In</p>
-									<ActionButton setSelectedPage={setSelectedPage}>
-										Become a Member
-									</ActionButton>
-								</div>
-							</div>
-						) : (
-							<button
-								className="rounded-full bg-secondary-500 p-2"
-								onClick={() => setIsMenuToggle(!isMenuToggle)}
-							>
-								<Bars3Icon className="h-6 w-6 text-white" />
-							</button>
-						)}
-					</div>
-				</div>
+		<nav className="flex justify-between items-center w-5/6 mx-auto py-4">
+			<img src={logo} width={200} alt="" />
+			<ul className="flex justify-center items-center gap-4">
+				<li className="font-medium group">
+					<Link to="/">Home</Link>
+					<span className="block w-0 group-hover:w-full transition-all duration-700 h-1 bg-[#ff6575] mt-[1px] rounded-full" />
+				</li>
+				<li className="font-medium group">
+					<Link to="/">
+						About
+						<span className="block w-0 group-hover:w-full transition-all duration-700 h-1 bg-[#ff6575] mt-[1px] rounded-full" />
+					</Link>
+				</li>
+				<li className="font-medium group">
+					<Link to="/">Dashboard</Link>
+					<span className="block w-0 group-hover:w-full transition-all duration-700 h-1 bg-[#ff6575] mt-[1px] rounded-full" />
+				</li>
+			</ul>
+			<div className="">
+				<button className="px-4 py-2 bg-[#ff6575] hover:bg-[#e72f41] rounded-md text-white font-medium transition-all duration-300">
+					Login
+				</button>
 			</div>
-			{/* <==<<=== Mobile Menu ===>>==> */}
-			{!isAboveMediumScreens && isMenuToggle && (
-				<div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-primary-100 shadow-2xl">
-					{/* <==<<=== Close Icon ===>>==> */}
-					<div className="flex justify-end px-12 pb-12 pt-7">
-						<button onClick={() => setIsMenuToggle(!isMenuToggle)}>
-							<XMarkIcon className="h-8 w-8 text-gray-400" />
-						</button>
-					</div>
-					{/* <==<<=== Menu Items ===>>==> */}
-					<div className="ml-[33%] flex flex-col gap-10 text-2xl">
-						<Link
-							page="Home"
-							selectedPage={selectedPage}
-							setSelectedPage={setSelectedPage}
-						/>
-						<Link
-							page="Benefits"
-							selectedPage={selectedPage}
-							setSelectedPage={setSelectedPage}
-						/>
-						<Link
-							page="Our Classes"
-							selectedPage={selectedPage}
-							setSelectedPage={setSelectedPage}
-						/>
-						<Link
-							page="Contact Us"
-							selectedPage={selectedPage}
-							setSelectedPage={setSelectedPage}
-						/>
-					</div>
-				</div>
-			)}
 		</nav>
 	);
 };
