@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .active {
-	@apply font-medium tracking-wide text-[#e72f41] transition-colors duration-300 hover:text-blue-400;
+	@apply font-medium tracking-wide text-[#e72f41] transition-colors duration-300 hover:text-[#ff6575];
 }
 
 .default {
