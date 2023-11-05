@@ -3,7 +3,7 @@ import bannerImg from "../assets/images/banner-img.png";
 
 const Banner = () => {
 	return (
-		<div className="bg-bannerBg py-20">
+		<div className="bg-bannerBg py-28">
 			<div className="grid md:grid-cols-2 items-center gap-6 w-5/6 mx-auto">
 				<div>
 					<h3 className="text-xl text-[#685f78] font-medium">
