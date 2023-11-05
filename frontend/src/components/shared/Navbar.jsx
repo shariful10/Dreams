@@ -29,8 +29,8 @@ const Navbar = () => {
 	}, [location]);
 
 	return (
-		<div className="bg-bannerBg">
-			<nav className="flex justify-between items-center w-5/6 mx-auto py-4">
+		<div className="bg-bannerBg fixed top-0 w-full">
+			<nav className="flex justify-between items-center w-5/6 mx-auto py-4 sticky">
 				<Link
 					to="/"
 					className={`${
