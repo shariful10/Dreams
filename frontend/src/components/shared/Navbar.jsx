@@ -4,20 +4,22 @@ import logo from "../../assets/images/logo.svg";
 const Navbar = () => {
 	return (
 		<nav className="flex justify-between items-center w-5/6 mx-auto py-4">
-			<img src={logo} width={200} alt="" />
+			<Link to="/">
+				<img src={logo} width={200} alt="" />
+			</Link>
 			<ul className="flex justify-center items-center gap-4">
 				<li className="font-medium group">
 					<Link to="/">Home</Link>
 					<span className="block w-0 group-hover:w-full transition-all duration-700 h-1 bg-[#ff6575] mt-[1px] rounded-full" />
 				</li>
 				<li className="font-medium group">
-					<Link to="/">
+					<Link to="/about">
 						About
 						<span className="block w-0 group-hover:w-full transition-all duration-700 h-1 bg-[#ff6575] mt-[1px] rounded-full" />
 					</Link>
 				</li>
 				<li className="font-medium group">
-					<Link to="/">Dashboard</Link>
+					<Link to="/dashboard">Dashboard</Link>
 					<span className="block w-0 group-hover:w-full transition-all duration-700 h-1 bg-[#ff6575] mt-[1px] rounded-full" />
 				</li>
 			</ul>

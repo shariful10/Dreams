@@ -3,3 +3,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active {
+	@apply font-medium tracking-wide text-[#e72f41] transition-colors duration-300 hover:text-blue-400;
+}
+
+.default {
+	@apply font-medium tracking-wide transition-colors duration-300 hover:text-[#ff6575];
+}
