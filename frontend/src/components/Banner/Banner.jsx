@@ -45,27 +45,27 @@ const Banner = () => {
 				</div>
 			</div>
 			<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-y-5 md:gap-2 justify-center items-center my-10 md:my-0 w-5/6 mx-auto">
-				<div className="flex gap-4 p-6 lg:p-2 2xl:p-6 bg-white shadow rounded-lg md:-mt-[18%] lg:-mt-[15%] hover:lg:-mt-[18%] transition-all duration-500">
+				<div className="flex gap-4 p-6 lg:p-2 2xl:p-6 bg-white shadow rounded-lg md:-mt-[18%] lg:-mt-[15%] hover:lg:-mt-[22%] transition-all duration-500">
 					<Pencil />
 					<BannerCard title="Online Courses">
 						<CountUp start={0} end={10} duration={5} />
 						k+
 					</BannerCard>
 				</div>
-				<div className="flex gap-4 p-6 lg:p-2 2xl:p-6 bg-white shadow rounded-lg md:-mt-[18%] lg:-mt-[15%] hover:lg:-mt-[18%] transition-all duration-500">
+				<div className="flex gap-4 p-6 lg:p-2 2xl:p-6 bg-white shadow rounded-lg md:-mt-[18%] lg:-mt-[15%] hover:lg:-mt-[22%] transition-all duration-500">
 					<Tutor />
 					<BannerCard title="Expert Tutors">
 						<CountUp start={0} end={186} duration={5} />+
 					</BannerCard>
 				</div>
-				<div className="flex gap-4 p-6 lg:p-2 2xl:p-6 bg-white shadow rounded-lg md:mt-1 lg:-mt-[15%] hover:lg:-mt-[18%] transition-all duration-500">
+				<div className="flex gap-4 p-6 lg:p-2 2xl:p-6 bg-white shadow rounded-lg md:mt-1 lg:-mt-[15%] hover:lg:-mt-[22%] transition-all duration-500">
 					<CourceIcon />
 					<BannerCard title="Ceritified Courses">
 						<CountUp start={0} end={5} duration={5} />
 						k+
 					</BannerCard>
 				</div>
-				<div className="flex gap-4 p-6 lg:p-2 2xl:p-6 bg-white shadow rounded-lg md:mt-1 lg:-mt-[15%] hover:lg:-mt-[18%] transition-all duration-500">
+				<div className="flex gap-4 p-6 lg:p-2 2xl:p-6 bg-white shadow rounded-lg md:mt-1 lg:-mt-[15%] hover:lg:-mt-[22%] transition-all duration-500">
 					<OnlineCourceIcon />
 					<BannerCard title="Ceritified Students">
 						<CountUp start={0} end={55} duration={5} />
