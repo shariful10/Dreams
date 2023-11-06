@@ -9,6 +9,10 @@ export default {
 			backgroundImage: {
 				bannerBg: "url('/src/assets/images/banner-bg.png')",
 			},
+         colors: {
+            headingColor: "#002058",
+            textColor: "#685f78",
+         }
 		},
 	},
 	plugins: [],

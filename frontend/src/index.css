@@ -19,3 +19,8 @@
 .defaultMob {
 	@apply font-medium tracking-wide transition-colors text-white duration-300 hover:text-[#012159];
 }
+
+* {
+   margin: 0;
+   padding: 0;
+}
